@@ -6,9 +6,12 @@
   </head>
   <body>
 
-      <a class="twitter-timeline" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a>
+     <a class="twitter-timeline" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a>
+     <!-- ↑↑アカウントに飛ぶアンカータグ（リンク） -->
+     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- 走らせてほしいスクリプト（外部から持ち込み） -->
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+     <!-- async：「書かれているHTMLの読み込み＆実行」と読み込みたい外部のスクリプトの実行が「全く別」で行われる
+     defer：「書かれているHTMLの読み込み」＆読み込みたい外部のスクリプトの実行が別で行われる。HTMLの実行は、スクリプトの読み込みが終了した後にされる  -->
   </body>
 </html>

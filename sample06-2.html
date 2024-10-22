@@ -3,23 +3,27 @@
   <head>
     <meta charset="utf-8">
   </head>
-  <script  src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
-function showNasa()
-{
-  twttr.widgets.createTimeline(
-      {
-        sourceType: "profile",
-        screenName: "nasa"
-      },
-      document.getElementById("nasaSpace")
-  );
-}
+    function showNasa()
+    {
+      var name = document.getElementById("User").value;
+      
+      twttr.widgets.createTimeline(
+          {
+            sourceType: "profile",
+            screenName: name
+            // どのような形で表示するか
+          },
+          document.getElementById("nasaSpace")
+      );
+    }
   </script>
 
   <body>
 
-<button type="button" name="NASA" onclick='showNasa()'>NASA</button>
+<input type="text" name="search" id="User"><br/>
+<button type="submit" onclick='showNasa()'>NASA</button>
 
 <div id='nasaSpace'></div>
 
